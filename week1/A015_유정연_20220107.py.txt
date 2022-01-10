@@ -1,0 +1,10 @@
+import sys
+
+num_list = list(map(int, sys.stdin.readline().split()))
+total = 0
+
+for i in num_list:
+  total = total + (i**2)
+
+result = total % 10
+print(result)

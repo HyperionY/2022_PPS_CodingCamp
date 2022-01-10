@@ -1,0 +1,20 @@
+import sys
+
+case = [0] * 8
+get_off = [0] * 4
+put_in = [0] * 4
+total_people = 0
+
+for i in range(4):
+  get_off[i], put_in[i] = map(int, sys.stdin.readline().split())
+
+for i in range(8):
+  if i % 2 == 0:
+    total_people = total_people - get_off[i//2]
+    case[i] = total_people
+  else:
+    total_people = total_people + put_in[i//2]
+    case[i] = total_people
+
+case.sort()
+print(case[7])

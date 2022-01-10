@@ -1,0 +1,18 @@
+import sys
+
+n = int(sys.stdin.readline())
+
+for _ in range(n):
+  s = list(map(int, sys.stdin.readline().split()))
+  num_s = s[0]
+  list_s = s[1:]
+  sum_s = sum(list_s)
+  mean_s = sum_s / num_s
+  total_num = 0
+  list_s.sort()
+
+  for i in list_s:
+    if i > mean_s:
+      total_num = total_num + 1
+
+  print("{:.3f}%".format((total_num/num_s)*100))

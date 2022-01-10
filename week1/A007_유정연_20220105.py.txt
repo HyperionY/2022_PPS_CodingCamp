@@ -1,0 +1,11 @@
+import sys
+
+s1 = sys.stdin.readline().split() 
+s2 = sorted(s1)
+
+if s1 == s2:
+  print("ascending")
+elif s1 == list(reversed(s2)):
+  print("descending")
+else:
+  print("mixed")

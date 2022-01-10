@@ -1,0 +1,13 @@
+def solution(s):
+    answer = True
+    test_list = "1234567890"
+    
+    if len(s) == 4 or len(s) == 6:
+        for i in s:
+            if not i in test_list:
+                answer = False
+                break
+    else:
+        answer = False
+        
+    return answer

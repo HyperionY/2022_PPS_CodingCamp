@@ -1,0 +1,21 @@
+import sys
+
+str_list = sys.stdin.readline()
+
+s = [0] * 10
+
+for i in range(len(str_list) - 1):
+  n = int(str_list[i])
+  s[n] = s[n] + 1
+
+snn = s[6] + s[9]
+need_num = (snn // 2) + (snn % 2)
+s[6] = need_num
+s[9] = 0
+result = 0
+
+for i in s:
+  if result < i:
+    result = i
+
+print(result)

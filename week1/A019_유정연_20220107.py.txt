@@ -1,0 +1,17 @@
+import sys
+
+a = int(sys.stdin.readline())
+b = int(sys.stdin.readline())
+c = int(sys.stdin.readline())
+
+num = a * b * c
+num_list = str(num)
+s = [0] * 10
+result = 0
+
+for i in num_list:
+  n = int(i)
+  s[n] = s[n] + 1
+
+for i in s:
+  print(i)
